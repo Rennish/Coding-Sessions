@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <div id="temperature" class="current-temperature">
+
+  </div>
+  
+  <script>
+
+    let city = prompt("What's your city? "); 
+    let key = "73dof19a030ad06t05b21e8521b4860f" ; 
+    let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}`; 
+
+
+    function displayResults(results){
+
+      let temperature = results.data.temperature.current ;
+      console.log(temperature); 
+
+      let currentTemperature = document.querySelector("#temperature"); 
+      currentTemperature.innerHTML = `current temperature is ${temperature} °C` ; 
+
+
+    }
+    
+    axios.get(apiurl).then(displayResults); 
+
+
+  </script>
+</body>
+</html>

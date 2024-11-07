@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    /*
+    let weather = {
+      temperature : "18 degrees",
+      humidity : "30%" ,
+      windSpeed : "30kph"
+    }; 
+
+    console.log(weather); 
+    console.log(weather.temperature); 
+    console.log(weather.humidity); 
+    console.log(weather.windSpeed);
+
+
+  */
+
+  let weather=[
+    {
+      temperature: "18 degrees",
+      humidity: "30%",
+      windSpeed: "30kph"
+    }, 
+    {
+      temperature: "20 degrees",
+      humidity: "70%",
+      windSpeed: "90kph"
+    }
+  ]
+
+  console.log(weather[1]); 
+
+  function showForecast(days){
+    console.log(days); 
+  }
+
+let forecast = [
+{
+  Monday : "28 degrees",
+  Tuesday: "8 degrees", 
+  Wednesday: "18 degrees",
+  Thursday: "38 degrees",
+  Friday: "58 degrees",
+  Saturday: "48 degrees",
+  Sunday: "88 degrees"
+}]
+;
+
+
+forecast.forEach(showForecast);
+
+  </script>
+</body>
+</html>

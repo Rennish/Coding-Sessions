@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    li {
+      color: brown;
+      list-style-type:georgian ; 
+        }
+  </style>
+</head>
+<body>
+ <ol>
+  <li>
+    kisumu
+  </li>
+  <li>kericho</li>
+  <li>machakos</li>
+ </ol>
+
+
+  <script>
+    // let cities = ["kisumu", "kericho", "machakos"] ; 
+   // console.log(cities[2]); 
+
+
+    function showcity(cityelement){
+     // alert(cityelement.innerHTML) ; 
+
+      cityelement.innerHTML = "<b>" + cityelement.innerHTML + "temperature is 18 degrees.  </b>" ; 
+
+     // console.log("temperature on Monday is 18 degress"); 
+    }
+
+    let cities = document.querySelectorAll("li")  ; 
+
+    cities.forEach(showcity) ; 
+
+
+
+
+
+    
+
+      
+  </script>
+</body>
+</html>

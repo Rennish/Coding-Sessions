@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>City Name Form</title>
+</head>
+
+<body>
+  <form id="city-form">
+    <label for="city">Enter your city name:</label>
+    <input type="text" id="city" name="city" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    const form = document.getElementById("city-form");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();  // prevent form submission
+      const city = document.getElementById("city").value;
+     // result.textContent = `You entered: ${city}`;
+
+      alert( `you entered ${city} `) ; 
+      form.reset();  // clear form input field
+    });
+  </script>
+</body>
+
+</html>

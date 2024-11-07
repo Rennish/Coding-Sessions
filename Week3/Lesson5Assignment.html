@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    let week = ["Sunday",
+                "Monday", 
+            "Tuesday", 
+            "Wednesday", 
+            "Thursday", 
+            "Friday", 
+            "Saturday"
+    ] ; 
+
+    console.log(week); 
+
+    console.log(week[0]) ; 
+
+    console.log(week[6] + "the temperature is 18 degrees"); 
+
+    console.log (week[6] + "  " + week[0]) ; 
+
+    week.splice(1,2)  ; 
+    console.log(week);  
+
+
+    function eachweek(day){
+    //  message = "18 degrees"; 
+        console.log(`temperature on ${day} is 18 degrees`)  ; 
+
+    }
+    week.forEach(eachweek); 
+
+    
+  </script>
+</body>
+</html>

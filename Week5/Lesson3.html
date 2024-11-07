@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
+  <style>
+    body{
+      background: pink;
+    }
+    h1{
+      color: brown;
+      text-align: center;
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎹 AJAX</h1>
+
+  <IMG src="https://paper-attachments.dropbox.com/s_A95344764D52AA21419095E524C2218D68BF719E44B29F7D8A2A3E2647B9B8AF_1560193261406_image.png"
+      alt="API">
+  </IMG>
+
+
+  <script>
+
+    function displaycontent(result){
+      //console.log(result.data);
+
+      result.data.forEach(users => {  
+        console.log(users.username); 
+      });
+     let h1 = document.querySelector("h1");
+     h1.innerHTML = `hi ${result.data[2].username} `; 
+      
+
+    }
+    let apiurl = "https://jsonplaceholder.typicode.com/users" ; 
+
+    axios.get(apiurl).then(displaycontent); 
+  //  document.write(apiurl); 
+
+   
+  </script>
+</body>
+</html>
